@@ -1,0 +1,5 @@
+# lecture slides stay out of the public repo
+*.pdf
+*:Zone.Identifier
+.DS_Store
+node_modules/
