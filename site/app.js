@@ -120,6 +120,10 @@ const FALLBACK_TOPICS = [
   [4, 'Vitamin D', '04-vitamin-d', 13], [5, 'Vitamin E and antioxidants', '05-vitamin-e', 13],
   [6, 'The B group and thiamin (B1)', '06-thiamin', 14], [7, 'Riboflavin (B2) and niacin (B3)', '07-riboflavin-niacin', 14], [8, 'Pantothenic acid (B5)', '08-pantothenic-acid', 14],
   [9, 'Vitamin B6', '09-vitamin-b6', 15], [10, 'Biotin (B7)', '10-biotin', 15], [11, 'Folate (B9)', '11-folate', 15],
+  [12, 'Minerals: the basics', '12-mineral-basics', 17], [13, 'Calcium', '13-calcium', 17], [14, 'Phosphorus and magnesium', '14-phosphorus-magnesium', 17],
+  [15, 'Iron', '15-iron', 18], [16, 'Iodine', '16-iodine', 18],
+  [17, 'Zinc', '17-zinc', 19], [18, 'Selenium', '18-selenium', 19],
+  [19, 'Water and electrolytes: Na, Cl, K', '19-electrolytes', 20], [20, 'Salt and health', '20-salt-and-health', 21],
 ].map(([n, title, slug, ch]) => ({ n, title, slug, ch, file: `questions/${slug}.md`, notes: `notes/${slug}.md`, weight: '', tutQs: '' }));
 
 async function loadIndex() {
@@ -136,8 +140,8 @@ async function loadIndex() {
     }
   } catch (e) { console.warn(e); }
   if (!topics.length) topics = FALLBACK_TOPICS;
-  if (!mocks.length) mocks = [1, 2, 3].map(i => ({ title: 'Mock Exam ' + i, file: `mock/exam-${i}.md`, id: String(i), note: '' }));
-  if (!Object.keys(lectures).length) lectures = { 12: 'Vitamins A & K', 13: 'Vitamins D & E', 14: 'Vitamins B1–B5', 15: 'Vitamins B6–B9' };
+  if (!mocks.length) mocks = [1, 2, 3, 4, 5, 6].map(i => ({ title: 'Mock Exam ' + i, file: `mock/exam-${i}.md`, id: String(i), note: '' }));
+  if (!Object.keys(lectures).length) lectures = { 12: 'Vitamins A & K', 13: 'Vitamins D & E', 14: 'Vitamins B1–B5', 15: 'Vitamins B6–B9', 17: 'Minerals: Ca, P, Mg', 18: 'Minerals: Fe, I', 19: 'Minerals: I, Zn, Se', 20: 'Na, Cl, K', 21: 'Salt and health, exam recap' };
   return { topics, mocks, lectures };
 }
 
@@ -601,7 +605,7 @@ async function viewHome(seq) {
   app.innerHTML = '';
   app.append(h(`<section class="hero">
     <h1>Human Nutrition 1 · Vitamins</h1>
-    <p class="sub">HNUT10010 / HNUT10020 exam practice · Lectures 12 to 15 · MCQ exam</p>
+    <p class="sub">HNUT10010 / HNUT10020 exam practice · Lectures 12 to 21 · MCQ exam</p>
     <div class="modes">
       <a class="mode primary" href="#/repeat"><span class="ic">🔁</span><b>Repetition</b><small>${repHomeText()}</small></a>
       <a class="mode" href="#/drill/tutorial"><span class="ic">🎯</span><b>Core drill</b><small>All ${tutCount} core questions, Topic 1 → Topic ${topics.length}, in order</small></a>

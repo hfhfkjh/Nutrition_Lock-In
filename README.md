@@ -4,7 +4,7 @@
 
 Start at **[TOPICS.md](TOPICS.md)** (progress tracker). Cheat sheet: **[cheat-sheet.md](cheat-sheet.md)**. Every number in one place: **[numbers.md](numbers.md)**. Things that are easy to mix up: **[confusing-bits.md](confusing-bits.md)**. Mock exams: **[mock/](mock/exam-1.md)**.
 
-Built from the lecture slides for lectures 12 to 15 (vitamins A, K, D, E and the B group). Same method as [SSD Lock-In](https://github.com/albinjoby82-ops/SSD_Lock-In).
+Built from the lecture slides for lectures 12 to 15 (vitamins A, K, D, E and the B group) and lectures 17 to 21 (minerals: calcium, phosphorus, magnesium, iron, iodine, zinc, selenium, sodium, chloride, potassium, and salt and health). Same method as [SSD Lock-In](https://github.com/albinjoby82-ops/SSD_Lock-In).
 
 ## Reading style (dyslexia-friendly)
 - One idea per line. Short sentences.
@@ -14,7 +14,7 @@ Built from the lecture slides for lectures 12 to 15 (vitamins A, K, D, E and the
 
 ## How each topic is built
 - `notes/NN-topic.md`: the slides that matter, as pictures, with a short explanation of each, and **🧠 check questions inline** (answer before opening).
-- Every topic starts with a **⭐ vitamin card**: names, active form, sources, numbers, function, deficiency, toxicity. That card is what the MCQs test.
+- Every topic starts with a **⭐ vitamin or mineral card**: names, active form, sources, numbers, function, deficiency, toxicity. That card is what the MCQs test. Mineral cards add absorption route, hormone or transport protein, and storage site, because lecture 21 slide 19 says those will be asked.
 - `questions/NN-topic.md`: end-of-topic test with
   1. **core questions** (explain, list, calculate), answered step by step, and
   2. **exam-style questions** (multiple choice, true/false), because the exam is MCQ.

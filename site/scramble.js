@@ -137,6 +137,78 @@ G['11-folate#Q3'] = () => {
   };
 };
 
+// ---------------------------------------------------------------- Topic 13 Q2: calcium portions to the RDA
+G['13-calcium#Q2'] = () => {
+  const foods = [['small cartons of yoghurt', 200, 'carton'], ['glasses of milk (125 ml)', 200, 'glass'], ['servings of canned sardines (56 g)', 200, 'serving'], ['pieces of cheddar (28 g)', 200, 'piece'], ['tubs of yoghurt', 385, 'tub'], ['glasses of milk (200 ml)', 247, 'glass'], ['slices of bread', 33, 'slice']];
+  const [name, per, unit] = pick(foods);
+  const who = pick([['a 16-year-old', 1200], ['an adult', 800], ['a pregnant woman', 1200], ['a breastfeeding mother', 1200], ['an 8-year-old', 800], ['a 14-year-old', 1200]]);
+  const other = who[1] === 1200 ? ['an adult', 800] : ['a teenager', 1200];
+  const n1 = Math.ceil(who[1] / per), n2 = Math.ceil(other[1] / per);
+  return {
+    q: `${who[0][0].toUpperCase() + who[0].slice(1)} wants to meet their calcium RDA from one food. One ${unit} gives about ${per} mg calcium.\n\n1. How many ${name} would they need in a day?\n2. How many would ${other[0]} need?`,
+    answers: [abs(`1. ${unit}s`, n1, '', 0.5), abs(`2. ${unit}s`, n2, '', 0.5)],
+    steps: [
+      `**Step 1: the RDAs**\n\n${who[0]}: ${who[1]} mg. ${other[0]}: ${other[1]} mg.\n\nAdults 800 mg; 11–17 years, pregnancy and lactation 1200 mg.\n\nFrom: §2`,
+      `**Step 2: divide and round up**\n\n${who[1]} ÷ ${per} = ${f(who[1] / per)} → **${n1}** ${unit}s\n\n${other[1]} ÷ ${per} = ${f(other[1] / per)} → **${n2}** ${unit}s\n\nFrom: §2, Equation 1`,
+    ],
+  };
+};
+
+// ---------------------------------------------------------------- Topic 15 Q2: iron portions to the PRI
+G['15-iron#Q2'] = () => {
+  const foods = [['lean beef', 3.1, '120 g', 'haem'], ['lamb chop', 2.3, '120 g', 'haem'], ['salmon', 1.4, '170 g', 'haem'], ['chicken breast', 0.8, '130 g', 'haem'], ['baked beans', 2.1, '150 g', 'non-haem'], ['spinach', 1.8, '90 g', 'non-haem'], ['boiled egg', 1.0, '50 g', 'non-haem'], ['wholemeal bread', 0.9, '32 g', 'non-haem']];
+  const a = pick(foods); let b = pick(foods); while (b === a) b = pick(foods);
+  const sex = pick(['woman', 'man']); const pri = sex === 'woman' ? 16 : 11;
+  const n1 = Math.ceil(pri / a[1]), n2 = Math.ceil(pri / b[1]);
+  return {
+    q: `A ${sex} needs ${pri} mg iron a day (EFSA PRI). ${a[0][0].toUpperCase() + a[0].slice(1)} gives ${a[1]} mg per ${a[2]} portion. ${b[0][0].toUpperCase() + b[0].slice(1)} gives ${b[1]} mg per ${b[2]}.\n\n1. How many portions of ${a[0]} would reach the PRI?\n2. How many portions of ${b[0]}?\n3. Which food's iron is better absorbed, and why?`,
+    answers: [abs(`1. portions of ${a[0]}`, n1, '', 0.5), abs(`2. portions of ${b[0]}`, n2, '', 0.5)],
+    steps: [
+      `**Step 1: ${a[0]}**\n\n${pri} ÷ ${a[1]} = ${f(pri / a[1])} → **${n1}** portions\n\nFrom: §2, Equation 1`,
+      `**Step 2: ${b[0]}**\n\n${pri} ÷ ${b[1]} = ${f(pri / b[1])} → **${n2}** portions`,
+      `**Step 3: absorption**\n\n${a[0]} is ${a[3]} iron, ${b[0]} is ${b[3]} iron.\n\n${a[3] === b[3] ? `Both are ${a[3]}, so absorption is similar (${a[3] === 'haem' ? '15–30%' : '1–20%, and strongly affected by tea, phytate, calcium and vitamin C'}).` : `${a[3] === 'haem' ? a[0] : b[0]} is better absorbed: haem iron 15–30% via HCP1, against 1–20% for non-haem iron, which is blocked by tea, phytate and calcium.`}\n\nFrom: §2, §4, §5`,
+    ],
+  };
+};
+
+// ---------------------------------------------------------------- Topic 19 Q2: sodium from salt
+G['19-electrolytes#Q2'] = () => {
+  const target = pick([6, 6, 6, 4, 3, 2]); const who = target === 6 ? 'adults' : target === 4 ? 'the RDA' : target === 3 ? '4–6 year olds' : '1–3 year olds';
+  const s1 = pick([0.3, 0.5, 0.6, 0.8, 1.0, 1.2]), s2 = pick([1.5, 1.8, 2.0, 2.5, 3.0]);
+  const lab = pick([0.4, 0.6, 0.8, 1.0, 1.2, 1.5, 2.0]);
+  const item1 = pick(['a packet of crisps', 'a slice of ham', 'a portion of chips', 'a bowl of cereal']), item2 = pick(['a ready meal', 'a takeaway curry', 'a frozen pizza', 'a tin of soup']);
+  return {
+    q: `The Irish salt target for ${who} is ${target} g a day. ${item1[0].toUpperCase() + item1.slice(1)} contains ${s1} g salt and ${item2} contains ${s2} g salt.\n\n1. How much sodium is in the target?\n2. How much sodium is in the two foods together?\n3. A food label says ${lab} g sodium. How much salt is that?`,
+    answers: [abs('1. g sodium', 0.4 * target, 'g', 0.05), abs('2. g sodium', 0.4 * (s1 + s2), 'g', 0.05), abs('3. g salt', lab / 0.4, 'g', 0.1)],
+    steps: [
+      `**Step 1: the rule**\n\nSodium = 0.4 × salt. Salt = sodium ÷ 0.4.\n\nFrom: §3, Equation 1`,
+      `**Step 2: the target**\n\n${target} × 0.4 = **${r2(0.4 * target)} g sodium**`,
+      `**Step 3: the foods**\n\n${s1} + ${s2} = ${r2(s1 + s2)} g salt. ${r2(s1 + s2)} × 0.4 = **${r2(0.4 * (s1 + s2))} g sodium**`,
+      `**Step 4: the label**\n\n${lab} ÷ 0.4 = **${r2(lab / 0.4)} g salt**`,
+    ],
+  };
+};
+
+// ---------------------------------------------------------------- Topic 20 Q2: label maths with the 2.54 rule
+G['20-salt-and-health#Q2'] = () => {
+  const na = pick([0.6, 0.8, 0.9, 1.0, 1.1, 1.3, 1.5, 1.8]);
+  const salt = pick([7, 8.5, 9, 10, 11, 12]);
+  const mg = pick([900, 1200, 1500, 1800, 2000, 2500]);
+  const item = pick(['A ready meal', 'A tin of soup', 'A frozen pizza', 'A sandwich']);
+  const person = pick(['A woman', 'A man', 'A student', 'An office worker']);
+  const thing = pick(['the ham and cheese sandwich', 'a Caesar salad with bacon', 'a portion of fish and chips', 'two slices of bread with butter']);
+  return {
+    q: `1. ${item} label says ${na} g sodium per pack. How much salt is that, and what fraction of the 6 g target?\n\n2. ${person} eats ${salt} g salt a day. How much sodium is that?\n\n3. ${thing[0].toUpperCase() + thing.slice(1)} carries ${f(mg)} mg sodium. How much salt is that?`,
+    answers: [abs('1. g salt', 2.54 * na, 'g', 0.1), abs('1. fraction of target', 2.54 * na / 6, '', 0.03), abs('2. g sodium', 0.4 * salt, 'g', 0.1), abs('3. g salt', 2.54 * mg / 1000, 'g', 0.1)],
+    steps: [
+      `**Step 1: the rules**\n\nSalt = 2.54 × sodium. Sodium = 0.4 × salt.\n\nFrom: §2, Equation 1`,
+      `**Step 2: the label**\n\n${na} × 2.54 = **${r2(2.54 * na)} g salt**\n\n${r2(2.54 * na)} ÷ 6 = **${r2(2.54 * na / 6)}** of the day's target.`,
+      `**Step 3: the person**\n\n${salt} × 0.4 = **${r2(0.4 * salt)} g sodium**\n\nThe target is 2.4 g sodium.`,
+      `**Step 4: the item**\n\n${f(mg)} mg = ${r2(mg / 1000)} g sodium. ${r2(mg / 1000)} × 2.54 = **${r2(2.54 * mg / 1000)} g salt**\n\nFrom: §7`,
+    ],
+  };
+};
+
 window.SCRAMBLE = G;
 window.SCRAMBLE_FMT = f;
 })();

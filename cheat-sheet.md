@@ -1,6 +1,6 @@
 # Cheat sheet
 
-Every vitamin on one page.
+Every vitamin and mineral on one page.
 
 This is what the MCQs test: name, form, source, job, number, deficiency, toxicity.
 
@@ -59,7 +59,68 @@ Learn the cards. Then check yourself against the tables below.
 
 ---
 
-## The six formulas
+## Minerals: major versus trace (Topic 12)
+
+| | Major (> 100 mg/day) | Trace (< 100 mg/day) |
+|---|---|---|
+| Members | Ca, Mg, P, Cl, K, Na, S | Cr, Co, Cu, F, I, Fe, Mn, Mo, Se, Zn |
+| Best sources | seafood, meat, dairy | all food groups, depends on soil, not changed by cooking |
+| Absorption | little digestion, small intestine | same |
+| Toxicity | rare, supplements | rare, supplements or environment |
+| Functions | enzyme cofactors, structure, nerve and muscle, electrolytes | redox enzyme cofactors, structure, non-enzyme proteins (haemoglobin) |
+
+---
+
+## The bone minerals
+
+| | Calcium | Phosphorus | Magnesium |
+|---|---|---|---|
+| In the body | 1200 g, 99% bone, 1% fluids | 85% skeleton, 15% soft tissue, as phosphate | > 300 enzymes; bone; inside cells |
+| Best sources | milk, yoghurt, cheese; sardines; bread; greens (lots) | yoghurt, salmon, milk, meat, eggs; processed foods | wheat bran, almonds, spinach, whole grains, legumes, mineral water |
+| Number | RDA adults 800 mg, teens and pregnancy 1200 mg, EFSA PRI 1000 mg | RDA adults 550 mg, pregnancy 950 mg | AI 300 mg women, 350 mg men |
+| Absorbed | ~30%: active vitamin D (calbindin) 20–30% + passive 50–70%. Blocked by oxalate and phytate | 55–70%: passive 60–70%, active vitamin D 30% | 20–70%: passive 50–70%, active 20–30%, solvent drag 10–20%. Kidney reabsorbs 95% |
+| Regulation | plasma 9–10.4 mg/100 ml. PTH up (absorption, reabsorption, resorption), calcitonin down. Intestine, kidney, bone | similar to calcium; urine P = intake | gut absorption and urine losses |
+| Functions | bone, muscle contraction, nerve, clotting, vascular tone | hydroxyapatite, phospholipids, DNA, ATP, pH buffer, phosphorylation | ATP (stabilises anions), glycolysis, β-oxidation, protein and DNA synthesis, bone, muscle, immune |
+| Status | DEXA: BMC, BMD. Osteopenia −1 to −2.5 SD, osteoporosis < −2.5 SD | hypophosphataemia < 0.3 mmol/L | plasma Mg |
+| Deficiency | low bone mass, osteoporosis | rare: weakness, bone pain, rickets, osteomalacia | rare: cramps, tetany, arrhythmias, hypocalcaemia, hypokalaemia |
+| Toxicity | US UL 2500 mg: kidney stones, soft tissue calcification, blocks Fe and Zn | hyperphosphataemia: calcifies kidney | not from food; UL 250 mg non-food forms |
+
+---
+
+## The trace elements
+
+| | Iron | Iodine | Zinc | Selenium |
+|---|---|---|---|---|
+| In the body | 4–5 g: 60% haemoglobin, 5% myoglobin, 5% enzymes, 20% ferritin, 10% haemosiderin, < 1% transferrin | thyroid | 2 g: 60% muscle, 30% bone, 0.1% plasma | selenoproteins |
+| Forms | haem (animal only, 15–30%) and non-haem (1–20%); Fe²⁺ absorbed, not Fe³⁺ | | | organic (selenomethionine, selenocysteine), inorganic (selenite, selenate) → selenide |
+| Best sources | lean beef, lamb, baked beans, spinach; Irish: breads, meats, breakfast cereals | marine fish, shellfish, eggs, milk (the Irish source); iodised salt | meat, seafood, liver; red meat 50 mg/kg, twice chicken | Brazil nuts 544 µg/oz; tuna, sardines, meat; high-protein foods |
+| Number | EFSA PRI women 16 mg, men 11 mg; RDA men 10, women 14, pregnancy 15 | AI 150 µg, pregnancy ~200 µg; UL 600 µg | RDA men 9.5 mg, women 7 mg | AI 70 µg, lactation 85 µg; RDA 55 µg; UL 400 µg |
+| Absorption | helped by vitamin C (Fe³⁺ → Fe²⁺), meat, low status, pregnancy; blocked by phytate, tea polyphenols (40–70%), calcium, low acid. Hepcidin regulates. No excretion route | > 90%, stomach and small intestine | 20–40%, like iron; phytate blocks; metallothionein store; out via gut 1–3 mg and urine 0.5 mg | efficient, small intestine; out via urine |
+| Functions | haemoglobin, myoglobin, cytochromes (ATP), energy enzymes, antioxidant enzymes, DNA synthesis | T4 and T3: metabolic rate, temperature, growth, brain. TRH → TSH → T3/T4 | > 100 enzymes: catalytic, structural, regulatory (zinc fingers). Growth, immunity, gene expression, superoxide dismutase, alcohol dehydrogenase | glutathione peroxidase with vitamin E; thyroid hormone metabolism; immune |
+| Status | ferritin (< 12 µg/L = stage 1), serum iron and binding capacity (stage 2), protoporphyrin and Hb (stage 3). WHO Hb < 13 men, < 12 women | urinary iodine | plasma zinc | |
+| Deficiency | most common worldwide; fatigue, pale, cold, poor cognition; microcytic anaemia. Infants, teens, pregnancy | goitre, hypothyroidism (high TSH, low T4), cretinism (irreversible). Most common preventable mental impairment | growth retardation, immaturity, dermatitis, alopecia, diarrhoea, infections. Children in developing world (phytate) | Keshan (heart), Kashin-Beck (joints); worsens iodine deficiency |
+| Toxicity | overload: hepcidin rises | hyperthyroidism: hyperactivity, weight loss | | hair and nail loss, garlic odour, metallic taste |
+
+---
+
+## The electrolytes and salt
+
+| | Sodium | Chloride | Potassium |
+|---|---|---|---|
+| Where | main cation **outside** cells (142 mM); 70 g in body; 75% in bone; most abundant electrolyte in sweat | main anion outside cells | main cation **inside** cells (150 mM) |
+| The pump | Na⁺/K⁺-ATPase: 3 Na⁺ out, 2 K⁺ in, 1 ATP; 20–40% of resting energy; nerve, muscle, heart | | |
+| Salt | NaCl = 40% Na + 60% Cl. Sodium = 0.4 × salt. Salt = 2.54 × sodium | | |
+| Functions | fluid balance (water follows Na), nerve, muscle, active transport, bone apatite | HCl in the stomach | nerve, muscle, intracellular electrolyte |
+| Regulation | aldosterone: high Na → ↓ aldosterone → Na in urine; low Na → ↑ aldosterone → Na kept. RAAS: renin (kidney) → angiotensinogen (liver) → angiotensin I → ACE (lungs) → angiotensin II → vessels constrict + aldosterone | with sodium | kidney; aldosterone ↑ NaCl kept, ↓ K kept |
+| Number | Irish target 6 g salt (2.4 g Na); actual 11 g men, 8.5 g women; toddlers 140% of target | | eat ~2 g, optimal 3.5 g; bananas, potatoes, spinach, legumes, nuts, meat, fish |
+| Deficiency | rare: heavy sweating, water without electrolytes. Nausea, dizziness, cramps, confusion, low BP | | |
+| Toxicity | salt → blood volume → BP → hypertension → CVD. Fish sauce death (Belgium 2018) | | |
+| Salt sources | manufactured foods 65–70%, cooking and table 15–20%, natural 15%. Breads 22–25%, processed meats 18%, meat dishes 7–9% = > 50% | | |
+| Salt sensitivity | ACE gene: GG typical; GA or AA elevated BP on high sodium, respond better to low sodium. DASH diet. Bread salt down 18–30% 2003–2012 | | |
+
+---
+
+## The formulas
 
 | Equation | Topic |
 |---|---|
@@ -70,6 +131,9 @@ Learn the cards. Then check yourself against the tables below.
 | MJ = kcal × 0.0042; thiamin PRI = 0.07 to 0.1 mg × MJ | 6 |
 | mg NE = mg niacin + mg tryptophan ÷ 60 | 7 |
 | µg DFE = µg food folate + 1.7 × µg folic acid | 11 |
+| portions = RDA ÷ mg per portion, round up (calcium, iron, any mineral) | 13, 15 |
+| g sodium = 0.4 × g salt | 19 |
+| g salt = 2.54 × g sodium | 20 |
 
 ---
 
@@ -86,3 +150,12 @@ Learn the cards. Then check yourself against the tables below.
 - **B6:** PLP moves amino groups. GABA. Glycogen.
 - **B7:** biotin = carboxylase. Raw egg white steals it.
 - **B9:** folate = one carbon. DNA, red cells, neural tube. 400 µg.
+- **Ca:** 1200 g, 99% bone. PTH pulls it up, calcitonin calms it down. DEXA, −2.5 SD.
+- **P:** phosphate. ATP. 85% bone. 550 mg.
+- **Mg:** 300 enzymes, holds ATP. Green leaves, nuts, bran. 300/350.
+- **Fe:** Fe²⁺ feeds you. Vitamin C helps, tea steals. Ferritin stores, transferrin carries, hepcidin decides. 16/11.
+- **I:** thyroid. Goitre grows, cretinism cannot be cured. Milk in Ireland. 150 µg.
+- **Zn:** growth, genes, immunity. Zinc fingers. Phytate blocks. 9.5/7.
+- **Se:** glutathione peroxidase + vitamin E. Brazil nuts. Keshan heart, Kashin-Beck bones. Garlic breath.
+- **Na/K:** K inside, Na outside. 3 out, 2 in. Water follows salt. Aldosterone keeps Na, loses K.
+- **Salt:** 40% sodium. × 2.54 on labels. 6 g target, 11 g reality. Bread, bacon, ready meals.
